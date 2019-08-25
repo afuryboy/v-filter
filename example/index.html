@@ -16,20 +16,14 @@
       el: '#app',
       mixins: [vFilter.mixin],
       data: {
-        list: [
-    { name: 'foo' },
-    { name: 'bar' },
-    { name: 'baz' },
-    { name: 'zap' },
-  ],
-        a: { date: 'Tue Jul 17 2014' }
+        list: [1, 2, 3, 4, 5, 6],
       },
       mounted: function() {
 
       },
       template: `
         <div>
-          <div v-for="order in before(list,3)">{{ order.name }}</div>
+          <div v-for="order in chunkBy(list,4,{a:1})">{{ order }}</div>
         </div>
       `
     })

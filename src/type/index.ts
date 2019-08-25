@@ -13,6 +13,8 @@ export interface Util {
   isObject(data:any) : boolean;
   isArray(data:any) : boolean;
   isUndefined(data:any) : boolean;
+  isString(data:any) : boolean;
+  isFunction(data:any) : boolean;
   toArray(data:any) : any[],
   objectContains(partial:object, object:object) : boolean;
 }

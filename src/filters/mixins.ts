@@ -1,15 +1,17 @@
 
-import concat from './array/concat';
-import after from './array/after';
-import before from './array/before';
-import afterWhere from './array/afterWhere';
-import beforeWhere from './array/beforeWhere';
+import concat from './collection/concat';
+import after from './collection/after';
+import before from './collection/before';
+import afterWhere from './collection/afterWhere';
+import beforeWhere from './collection/beforeWhere';
+import chunkBy from './collection/chunkBy';
 const misxins:any = {
   concat,
   after,
   before,
   afterWhere,
-  beforeWhere
+  beforeWhere,
+  chunkBy
 }
 
 export default misxins

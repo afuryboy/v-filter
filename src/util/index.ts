@@ -1,6 +1,4 @@
 
-import { Util } from '../type'
-
 /**
  * @description: 返回数据类型
  * @param {any}
@@ -43,6 +41,28 @@ export function isArray(raw:any):boolean {
   return result
 }
 /**
+ * @description: 判断是否是函数
+ * @param {any}
+ * @return: {boolean}
+ */
+export function isFunction(raw:any):boolean {
+  let result = false
+  let type = typeCheck(raw)
+  if (type === 'Function') result = true
+  return result
+}
+/**
+ * @description: 判断是否是字符串
+ * @param {any}
+ * @return: {boolean}
+ */
+export function isString(raw:any):boolean {
+  let result = false
+  let type = typeCheck(raw)
+  if (type === 'String') result = true
+  return result
+}
+/**
  * @description: 判断是否是undefined
  * @param {any}
  * @return: {boolean}
@@ -77,12 +97,5 @@ export function objectContains(partial:object|any, object:object|any) : boolean 
     return (object[el] !== undefined) && (object[el] == partial[el]);
   }).indexOf(false) == -1;
 }
-const util:Util = {
-  typeCheck,
-  isObject,
-  isArray,
-  isUndefined,
-  toArray,
-  objectContains
-}
-export default util
+
+
